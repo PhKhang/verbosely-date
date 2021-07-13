@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calendar</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <script defer src="muscle.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="light">
+  
+    <main style="user-select: none;">
+      <p id="thang" ></p>
+      <div class="nameofdays">
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sar</div>
+        <div>Sun</div>
+      </div>
+      <div class="week1">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8" id=""></div>
+      </div>
+      <div class="week2">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8"></div>
+      </div>
+      <div class="week3">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8"></div>
+      </div>
+      <div class="week4">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8"></div>
+      </div>
+      <div class="week5">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8"></div>
+      </div>
+      <div class="week6">
+        <div class="thu2"></div>
+        <div class="thu3"></div>
+        <div class="thu4"></div>
+        <div class="thu5"></div>
+        <div class="thu6"></div>
+        <div class="thu7"></div>
+        <div class="thu8"></div>
+      </div>
+    </main>
+    <content>
+      <div class="nut">
+        <div onclick="thangtruoc()" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">arrow_back_ios_new</span></div>
+        <div onclick="thangsau()" style="cursor: pointer;"><span class="material-icons" style="user-select: none; -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);">arrow_back_ios_new</span></div>
+        <div onclick="baygio()" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">today</span></div>
+        <div id="light" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">light_mode</span></div>
+        <div id="dark" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">dark_mode</span></div>
+        <div id="pastel" style="cursor: pointer;"><span class="material-icons" style="user-select: none;">grass</span></div>
+      </div>
+      <div class="content" style="padding: 10px;"></div>
+    </content>
+</body>
+
+</html>

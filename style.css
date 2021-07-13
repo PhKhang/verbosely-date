@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+:root {
+  --sideOfDate: calc(0.094 * 500px);
+  --foregroundColor: /* hsl(0, 68%, 69%) */ white;
+  --backgroundColor: var(--foregroundColor); 
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  --shadowLower: none;
+  --shadowUpper: none; 
+  --colorOfSun: hsl(3, 100%, 87%);
+  --colorOfDay: auto;
+  --colorOfDate: auto;
+  --transTime: 0.1s;
+  --borderColorOfToday: black;
+  --shadowOfToday: none;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+
+.pastel {
+  --foregroundColor: hsl(110, 75%, 80%);
+  --backgroundColor: var(--foregroundColor);
+  --shadowLower: inset -5px -5px 10px rgba(255, 255, 255, 0.33),
+  inset 5px 5px 10px rgba(0, 0, 0, 0.33);
+  --shadowUpper: -5px -5px 10px rgba(255, 255, 255, 0.5),
+  5px 5px 10px rgba(0, 0, 0, 0.33);
+  --borderColorOfToday: transparent;
+  --shadowOfToday: inset -5px -5px 6px rgba(255, 255, 255, 0.5), inset 5px 5px 6px rgba(0, 0, 0, 0.33),
+  -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.33);
+}
+.dark {
+  --foregroundColor: hsl(255, 36%, 17%);
+  --backgroundColor: #000;
+  font-family: "Roboto Slab", serif;
+  --colorOfSun: /* #FF1744 */var(--colorOfDay);
+  --colorOfDay: #FF730B;
+  --colorOfDate: #fff;
+  --shadowLower: none;
+  --shadowUpper: none; 
+  --borderColorOfToday: white;
+}
+body {
+  padding: 10px;
+  background-color: var(--backgroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+
+#thang {
+  color: var(--colorOfDay);
+  margin: 10px;
+  font-size: 1.3rem;
+}
+
+main {
+  background-color: var(--foregroundColor);
+  height: 500px;
+  width: 500px;
+  box-shadow: var(--shadowLower);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+content {
+  margin: 20px;
+  display: block;
+  background-color: var(--foregroundColor);
+  min-height: 500px;
+  width: 500px;
+  box-shadow: var(--shadowLower);
+  border-radius: 10px;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+
+.week1,
+.week2,
+.week3,
+.week4,
+.week5,
+.week6,
+.nameofdays,
+.nut {
+  color: var(--colorOfDay);
+  width: 100%;
+  height: 16.6%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.week1 > *,
+.week2 > *,
+.week3 > *,
+.week4 > *,
+.week5 > *,
+.week6 > * {
+  height: var(--sideOfDate);
+  width: var(--sideOfDate);
+  color: var(--colorOfDate);
+  border-radius: 50%;
+  background-color: var(--foregroundColor);
+  box-shadow: var(--shadowUpper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+.thu8{
+  background-color: var(--colorOfSun);
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+.nameofdays > *,
+.nut > * {
+  height: auto;
+  width: calc(1.14 * var(--sideOfDate));
+  border-radius: calc(0.3 * var(--sideOfDate));
+  background-color: var(--foregroundColor);
+  box-shadow: var(--shadowUpper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0rem 0.2rem 0rem;
+  transition: background-color var(--transTime), box-shadow var(--transTime);
+}
+.nut {
+  width: 100%;
+  height: min-content;
+  flex-wrap: wrap;
+}
+.nut > * {
+  height: max-content;
+  flex: 0 0 21%;
+  margin: 15px;
+}
+
+.today {
+  box-sizing: border-box; 
+  border: 2px solid var(--borderColorOfToday); 
+  box-shadow: var(--shadowOfToday); 
+  background-color: var(--foregroundColor)
+}
+.todaySunday {
+  box-sizing: border-box; 
+  border: 2px solid var(--borderColorOfToday); 
+  box-shadow: var(--shadowOfToday); 
+  background-color: var(--colorOfSun)
+}
+
+@media only screen and (max-width: 510px) {
+  main {
+    width: 90vw;
+    height: 98.8vw;
+  }
+  content {
+    width: 90vw;
+    height: 90vw;
+  }
+  .nut {
+    width: 90vw;
+  }
+  .nut > * {
+    padding: 2px;
+    border-radius: 20px;
+  }
+  .material-icons {
+    font-size: 1.5rem;
+  }
+  :root {
+    --sideOfDate: calc(0.096 * 100vw);
+    font-size: 4vw;
+  }
+  body {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  body {
+    flex-direction: column;
+  }
+}
